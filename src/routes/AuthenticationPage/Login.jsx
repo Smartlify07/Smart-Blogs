@@ -18,9 +18,6 @@ const Login = () => {
           <h1 className="text-black text-left text-2xl font-semibold font-rubik">
             Welcome Back!
           </h1>
-          <Form>
-            <Button value="Login" />
-          </Form>
 
           <p className="text-black text-sm font-rubik">
             Don&apos; have an account?{" "}

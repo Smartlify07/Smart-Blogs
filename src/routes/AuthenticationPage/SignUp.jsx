@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom";
+import { Link, redirect } from "react-router-dom";
 import { useState } from "react";
+import Button from "../../Components/Button";
+import { handleSignUp } from "../../functions/handleAddUser";
 const SignUp = () => {
   const [formFields, setFormFields] = useState({
     name: "",
@@ -16,10 +18,26 @@ const SignUp = () => {
     }));
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+    if (!formFields.name || !formFields.email) {
+      console.log("All fields are required");
+      return;
+    } else {
+      redirect("");
+      console.log("submit");
+      handleSignUp({ name: formFields.name, email: formFields.email });
+      setFormFields({
+        name: "",
+        email: "",
+      });
+    }
+  }
+
   return (
     <section className="w-full min-h-screen">
       <div className="flex overflow-hidden relative  min-h-screen h-full">
-        <div className="hidden    bg-black h-screen flex-col gap-6 text-white items-center justify-center lg:flex lg:w-7/12 xl:w-6/12 ">
+        <div className="hidden bg-black h-screen flex-col gap-6 text-white items-center justify-center lg:flex lg:w-7/12 xl:w-6/12 ">
           <h1 className="text-white font-extrabold text-3xl text-center font-rubik ">
             Dive deeper into your interests
           </h1>
@@ -31,7 +49,10 @@ const SignUp = () => {
             <span className="text-malachite text-2xl"> Smart Blogs</span>
           </h1>
 
-          <form className="flex flex-col gap-5 items-center justify-center lg:w-6/12 font-rubik">
+          <form
+            onSubmit={(e) => handleSubmit(e)}
+            className="flex flex-col gap-5 items-center justify-center lg:w-6/12 font-rubik"
+          >
             <div className="flex flex-col gap-2 w-full">
               <label htmlFor="Name">Name</label>
               <input
@@ -54,6 +75,8 @@ const SignUp = () => {
                 onChange={handleChange}
               />
             </div>
+
+            <Button value="Sign up"></Button>
           </form>
 
           <p className="text-black text-sm font-rubik">

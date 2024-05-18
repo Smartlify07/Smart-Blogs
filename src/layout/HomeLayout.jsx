@@ -1,5 +1,11 @@
+import Home from "../routes/Home/Home";
+
 const HomeLayout = () => {
-  return <div>HomeLayout</div>;
+  return (
+    <>
+      <Home></Home>
+    </>
+  );
 };
 
 export default HomeLayout;
