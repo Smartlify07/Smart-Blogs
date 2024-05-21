@@ -8,6 +8,7 @@ import HomeLayout from "./layout/HomeLayout";
 import Login from "./routes/AuthenticationPage/Login";
 import SignUp from "./routes/AuthenticationPage/SignUp";
 import RootLayout from "./layout/RootLayout";
+import AuthenticationProvider from "./Context/AuthenticationContext";
 
 function App() {
   const router = createBrowserRouter(
@@ -23,7 +24,9 @@ function App() {
   );
   return (
     <>
-      <RouterProvider router={router} />
+      <AuthenticationProvider>
+        <RouterProvider router={router} />
+      </AuthenticationProvider>
     </>
   );
 }

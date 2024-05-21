@@ -7,7 +7,7 @@ const Home = () => {
       <div className="flex flex-col gap-20 lg:flex-row lg:justify-between lg:gap-0">
         <div className="flex flex-col gap-6 ">
           <header className="lg:w-9/12 relative">
-            <h1 className="text-white text-5xl leading-[3rem] font-light font-playfair lg:text-8xl">
+            <h1 className="text-white text-5xl leading-[3rem] font-light font-playfair lg:text-7xl xl:text-8xl">
               Create. Share. Inspire.
             </h1>
             <BiStar className="absolute -top-6 text-white text-2xl lg:-top-5" />
@@ -25,7 +25,7 @@ const Home = () => {
           </Link>
         </div>
 
-        <div className=" hidden self-center  justify-center items-center w-[250px] h-[250px] rounded-full border-2 border-white lg:w-[300px] lg:flex lg:h-[300px]">
+        <div className=" hidden self-center  justify-center items-center w-[250px] h-[250px] rounded-full  border-2 border-white lg:w-[300px] lg:h-[300px] lg:flex">
           <h2 className="text-white text-2xl">Let&apos;s Get creative</h2>
         </div>
       </div>

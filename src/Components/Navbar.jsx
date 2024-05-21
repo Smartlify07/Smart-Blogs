@@ -21,7 +21,7 @@ const Navbar = () => {
           </Link>
         </ul>
 
-        <div className="flex flex-col gap-1 lg:hidden">
+        <div className="flex flex-col gap-1 md:hidden">
           <div className="w-9 h-1 bg-black rounded-lg"></div>
           <div className="w-9 h-1 bg-black rounded-lg"></div>
           <div className="w-9 h-1 bg-black rounded-lg"></div>

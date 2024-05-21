@@ -1,8 +1,13 @@
-import { Link, redirect } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Button from "../../Components/Button";
-import { handleSignUp } from "../../functions/handleAddUser";
+import { handleSignUp } from "../../functions/handleSignUp";
+import useAuthentication from "../../hooks/useAuthentication";
+
 const SignUp = () => {
+  const { isLoggedIn, setIsLoggedIn } = useAuthentication();
+  const navigate = useNavigate();
+
   const [formFields, setFormFields] = useState({
     name: "",
     email: "",
@@ -11,7 +16,6 @@ const SignUp = () => {
 
   function handleChange(e) {
     const { name, value } = e.target;
-
     setFormFields((values) => ({
       ...values,
       [name]: value,
@@ -24,15 +28,17 @@ const SignUp = () => {
       console.log("All fields are required");
       return;
     } else {
-      redirect("");
-      console.log("submit");
       handleSignUp({ name: formFields.name, email: formFields.email });
       setFormFields({
         name: "",
         email: "",
       });
+      setIsLoggedIn(true);
+      navigate("/");
     }
   }
+
+  console.log(isLoggedIn);
 
   return (
     <section className="w-full min-h-screen">

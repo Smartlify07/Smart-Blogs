@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Form from "../../Components/FormManager";
-import Button from "../../Components/Button";
 
 const Login = () => {
   return (

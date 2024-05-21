@@ -11,6 +11,10 @@ export const handleSignUp = async ({ name, email }) => {
     body: JSON.stringify(dataToUpdate),
   };
   const response = await fetch("http://localhost:4000/profile", requestOptions);
+
+  if (!response.ok) {
+    throw new Error("A problem occurred with that action " + response.status);
+  }
   const data = await response.json();
   console.log(data);
 };
