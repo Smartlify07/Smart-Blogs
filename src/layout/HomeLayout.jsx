@@ -1,15 +1,17 @@
 import useAuthentication from "../hooks/useAuthentication";
 import Home from "../routes/Home/Home";
+import UserHome from "../routes/Home/UserHome";
+import { useLoaderData } from "react-router-dom";
 
 const HomeLayout = () => {
   const { isLoggedIn } = useAuthentication();
-
-  console.log(isLoggedIn);
+  const blogPosts = useLoaderData();
+  console.log(blogPosts);
 
   return (
     <>
-      {!isLoggedIn && <Home></Home>}
-      {isLoggedIn && <p>Is Logged in home layout</p>}
+      {!isLoggedIn && <Home />}
+      {isLoggedIn && <UserHome />}
     </>
   );
 };

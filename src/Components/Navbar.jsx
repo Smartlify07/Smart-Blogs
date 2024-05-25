@@ -8,7 +8,9 @@ const Navbar = () => {
           <span className="text-malachite">Smart</span>Blogs
         </Link>
         <ul className="hidden  items-center gap-10 justify-between md:flex ">
-          <Link className="text-dark text-lg">Write</Link>
+          <Link className="text-dark text-lg" to={"/create"}>
+            Write
+          </Link>
           <Link to={"/signup"} className="text-dark text-lg">
             Sign in
           </Link>

@@ -21,5 +21,29 @@
   --pakistan-green: hsl(141, 89%, 15%);
   --sea-green: hsl(147, 93%, 28%);
   --Malachite: hsl(144, 82%, 47%);
+  --Malachite-light: hsl(144, 82%, 70%);
   --white: hsl(0, 0%, 100%);
+}
+::-webkit-scrollbar {
+  width: 10px;
+  padding: 0 1rem;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+  padding: 0 1rem;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--Malachite-light);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--sea-green);
 }

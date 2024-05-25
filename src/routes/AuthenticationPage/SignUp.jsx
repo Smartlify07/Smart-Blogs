@@ -5,7 +5,7 @@ import { handleSignUp } from "../../functions/handleSignUp";
 import useAuthentication from "../../hooks/useAuthentication";
 
 const SignUp = () => {
-  const { isLoggedIn, setIsLoggedIn } = useAuthentication();
+  const { setIsLoggedIn } = useAuthentication();
   const navigate = useNavigate();
 
   const [formFields, setFormFields] = useState({
@@ -37,8 +37,6 @@ const SignUp = () => {
       navigate("/");
     }
   }
-
-  console.log(isLoggedIn);
 
   return (
     <section className="w-full min-h-screen">

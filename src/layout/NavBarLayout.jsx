@@ -1,10 +1,14 @@
 import Navbar from "../Components/Navbar";
-
+import UserNavbar from "../Components/UserNavbar";
+import useAuthentication from "../hooks/useAuthentication";
 const NavBarLayout = () => {
+  const { isLoggedIn } = useAuthentication();
+
   return (
-    <>
-      <Navbar />
-    </>
+    <nav>
+      {!isLoggedIn && <Navbar />}
+      {isLoggedIn && <UserNavbar />}
+    </nav>
   );
 };
 
