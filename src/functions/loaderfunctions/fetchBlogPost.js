@@ -1,8 +1,11 @@
+import getUrl from "../getUrl";
+
 const fetchBlogPost = async ({ params }) => {
+  const { blogUrl } = getUrl();
   try {
     const { id } = params;
 
-    const response = await fetch(`http://localhost:4000/blogs/${id}`);
+    const response = await fetch(blogUrl + id);
 
     if (!response.ok) {
       throw Error("Sorry that blog doesn't exist");

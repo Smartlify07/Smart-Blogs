@@ -1,5 +1,8 @@
+import getUrl from "../getUrl";
+
 const fetchUserDetails = async () => {
-  const response = await fetch("http://localhost:4000/profile");
+  const { userProfileUrl } = getUrl();
+  const response = await fetch(userProfileUrl);
 
   if (!response.ok) {
     throw Error("Couldn't fetch user profile");

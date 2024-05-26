@@ -46,7 +46,6 @@
         "userImage": "/images/blogs/janesmith.jpg"
       },
       "upvotes": 100,
-
       "blogCoverImage": "/images/blogs/covers/webdesign.jpg",
       "comments": [
         {
@@ -73,7 +72,6 @@
         "userImage": "/images/blogs/alicejohnson.jpg"
       },
       "upvotes": 900,
-
       "blogCoverImage": "/images/blogs/covers/advanced-javascript.jpg",
       "comments": [
         {
@@ -89,6 +87,19 @@
           "timestamp": "2024-05-23T14:00:00Z"
         }
       ]
+    },
+    {
+      "id": "d3b1",
+      "createdAt": 1716761861236,
+      "title": "Hey there",
+      "content": "This is my blog",
+      "user": {
+        "name": "anosikeobinna",
+        "userImage": ""
+      },
+      "upvotes": 0,
+      "blogCoverImage": "blob:http://localhost:5174/50203036-5a31-4b66-a466-338d0366be9d",
+      "comments": []
     }
   ]
 }
