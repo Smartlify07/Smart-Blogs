@@ -8,8 +8,7 @@ import { MdOutlineBookmarkAdd } from "react-icons/md";
 const BlogDetails = () => {
   const blog = useLoaderData();
 
-  const { title, blogCoverImage, content, createdAt, user, upvotes } = blog;
-  console.log(upvotes);
+  const { title, blogCoverImage, content, createdAt, user } = blog;
 
   return (
     <section className=" font-rubik px-6 py-14 mb-10 lg:px-20">
@@ -43,7 +42,11 @@ const BlogDetails = () => {
         </LazyLoad>
 
         <p className="text-black font-sourcesans text-lg leading-8 mt-10 mb-5  lg:w-7/12">
-          {content}
+          {content.split("\n").map((item, index) => (
+            <span key={index}>
+              {item} <br />
+            </span>
+          ))}
         </p>
 
         <ActionBar />
@@ -74,7 +77,6 @@ export const ActionBar = () => {
   const blog = useLoaderData();
 
   const { comments, upvotes } = blog;
-  console.log(upvotes);
   return (
     <div className="flex items-center gap-7 my-4  w-full justify-center lg:justify-between lg:w-6/12">
       <div className="flex items-center gap-10">

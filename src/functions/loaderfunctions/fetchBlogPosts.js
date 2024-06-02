@@ -1,16 +1,15 @@
+import getUrl from "../getUrl";
+
 const fetchBlogPosts = async () => {
-  try {
-    const response = await fetch("http://localhost:4000/blogs");
+  const { blogUrl } = getUrl();
+  const response = await fetch(blogUrl);
 
-    if (!response.ok) {
-      throw Error("Couldn't fetch user profile");
-    }
-    const blogPosts = await response.json();
-
-    return blogPosts;
-  } catch (error) {
-    console.error(error);
+  if (!response.ok) {
+    throw Error("Failed to fetch blogs" + response.status);
   }
+  const blogPosts = await response.json();
+
+  return blogPosts;
 };
 
 export default fetchBlogPosts;

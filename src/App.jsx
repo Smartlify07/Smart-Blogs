@@ -13,6 +13,9 @@ import fetchBlogPosts from "./functions/loaderfunctions/fetchBlogPosts";
 import BlogDetails from "./routes/BlogDetails/BlogDetails";
 import fetchBlogPost from "./functions/loaderfunctions/fetchBlogPost";
 import CreateBlog from "./routes/CreateBlog/CreateBlog";
+import FetchErrorPage from "./routes/ErrorPages/FetchErrorPage";
+import ProfileLayout from "./layout/ProfileLayout";
+import EditProfile from "./routes/Profile/EditProfile";
 
 function App() {
   const router = createBrowserRouter(
@@ -24,6 +27,7 @@ function App() {
             index
             element={<HomeLayout />}
             loader={fetchBlogPosts}
+            errorElement={<FetchErrorPage />}
           />
 
           <Route
@@ -31,6 +35,8 @@ function App() {
             element={<BlogDetails />}
             loader={fetchBlogPost}
           />
+          <Route path="/dashboard" element={<ProfileLayout />} />
+          <Route path="/dashboard/edit" element={<EditProfile />} />
         </Route>
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />

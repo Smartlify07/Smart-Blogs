@@ -1,11 +1,11 @@
 /* eslint-disable react/prop-types */
-const Button = (props) => {
+const Button = ({ handleSubmit, value }) => {
   return (
     <button
-      onSubmit={props.handleSubmit}
+      onClick={handleSubmit}
       className={`bg-malachite px-7 py-3 rounded-sm text-white font-semibold font-rubik text-base w-full transition-all ease-in hover:bg-seagreen`}
     >
-      {props.value}
+      {value}
     </button>
   );
 };

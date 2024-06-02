@@ -11,10 +11,13 @@
     "server": "json-server -p 4000 -w ./src/api/data.json"
   },
   "dependencies": {
+    "cloudinary": "^2.2.0",
+    "cloudinary-react": "^1.8.1",
     "json-server": "^1.0.0-beta.0",
     "moment": "^2.30.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-dropzone": "^14.2.3",
     "react-icons": "^5.2.1",
     "react-lazy-load-image-component": "^1.6.0",
     "react-lazyload": "^3.2.1",

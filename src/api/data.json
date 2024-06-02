@@ -1,7 +1,8 @@
 {
   "profile": {
     "name": "anosikeobinna",
-    "email": "anosike@gmail.com"
+    "email": "anosike@gmail.com",
+    "blogs": []
   },
   "blogs": [
     {
@@ -46,7 +47,6 @@
         "userImage": "/images/blogs/janesmith.jpg"
       },
       "upvotes": 100,
-
       "blogCoverImage": "/images/blogs/covers/webdesign.jpg",
       "comments": [
         {
@@ -73,7 +73,6 @@
         "userImage": "/images/blogs/alicejohnson.jpg"
       },
       "upvotes": 900,
-
       "blogCoverImage": "/images/blogs/covers/advanced-javascript.jpg",
       "comments": [
         {
@@ -89,6 +88,44 @@
           "timestamp": "2024-05-23T14:00:00Z"
         }
       ]
+    },
+    {
+      "id": "4085",
+      "createdAt": 1716906172586,
+      "title": "Medium",
+      "content": "Holla",
+      "user": {
+        "name": "anosikeobinna",
+        "userImage": ""
+      },
+      "upvotes": 0,
+      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1716906142/s22wkonf4cs2yzeutpjp.webp",
+      "comments": []
+    },
+    {
+      "id": "142b",
+      "createdAt": 1717098072105,
+      "title": "Test",
+      "content": "My story",
+      "user": {
+        "name": "anosikeobinna",
+        "userImage": ""
+      },
+      "upvotes": 0,
+      "comments": []
+    },
+    {
+      "id": "afb5",
+      "createdAt": 1717341102429,
+      "title": "My blog",
+      "content": "A new blog",
+      "user": {
+        "name": "anosikeobinna",
+        "userImage": ""
+      },
+      "upvotes": 0,
+      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717341081/bzshmqjxr6m67nmcwrp0.jpg",
+      "comments": []
     }
   ]
 }

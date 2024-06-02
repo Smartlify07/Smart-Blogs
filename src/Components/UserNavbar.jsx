@@ -1,19 +1,10 @@
-import { useEffect, useState } from "react";
 import { FaPenNib } from "react-icons/fa6";
 import { Link } from "react-router-dom";
-
-import fetchUserDetails from "../functions/loaderfunctions/fetchUserDetails";
+import useUserDetails from "../hooks/useUserDetails";
+import UserAvatar from "./UserAvatar";
 
 const UserNavbar = () => {
-  const [userInitial, setUserInitial] = useState("");
-  useEffect(() => {
-    const getUserDetails = async () => {
-      const userData = await fetchUserDetails();
-      setUserInitial(userData.name[0].toUpperCase()); // Get the first letter of the name
-    };
-
-    getUserDetails();
-  }, []);
+  const { userNameInitial } = useUserDetails();
   return (
     <nav className="py-5 px-5 bg-white border-b font-rubik lg:py-4 lg:px-10">
       <nav className="flex items-center justify-between">
@@ -39,11 +30,7 @@ const UserNavbar = () => {
             Write <FaPenNib />
           </Link>
 
-          <Link className="">
-            <div className="w-8 h-8 rounded-full flex justify-center items-center bg-malachite text-white font-semibold text-lg">
-              <h4>{userInitial}</h4>
-            </div>
-          </Link>
+          <UserAvatar userInitial={userNameInitial} />
         </div>
 
         <div className="flex flex-col gap-1 md:hidden">
