@@ -4,7 +4,7 @@ import useUserDetails from "../hooks/useUserDetails";
 import UserAvatar from "./UserAvatar";
 
 const UserNavbar = () => {
-  const { userInitial } = useUserDetails();
+  const { userNameInitial } = useUserDetails();
   return (
     <nav className="py-5 px-5 bg-white border-b font-rubik lg:py-4 lg:px-10">
       <nav className="flex items-center justify-between">
@@ -30,7 +30,7 @@ const UserNavbar = () => {
             Write <FaPenNib />
           </Link>
 
-          <UserAvatar userInitial={userInitial} />
+          <UserAvatar userInitial={userNameInitial} />
         </div>
 
         <div className="flex flex-col gap-1 md:hidden">

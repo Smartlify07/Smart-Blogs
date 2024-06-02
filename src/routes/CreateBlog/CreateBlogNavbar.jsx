@@ -6,7 +6,7 @@ import publishBlog from "../../functions/publishBlog";
 import { useNavigate } from "react-router-dom";
 
 const CreateBlogNavbar = ({ postBody, postTitle, blogCoverImage }) => {
-  const { userInitial } = useUserDetails();
+  const { userNameInitial } = useUserDetails();
   const navigate = useNavigate();
 
   return (
@@ -26,7 +26,7 @@ const CreateBlogNavbar = ({ postBody, postTitle, blogCoverImage }) => {
               }, 1000);
             }}
           />
-          <UserAvatar userInitial={userInitial} />
+          <UserAvatar userInitial={userNameInitial.toUpperCase()} />
         </div>
       </div>
     </nav>

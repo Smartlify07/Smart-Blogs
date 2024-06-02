@@ -3,6 +3,7 @@ import fetchUserDetails from "./loaderfunctions/fetchUserDetails";
 
 const publishBlog = async (postTitle, postBody, blogCoverImage) => {
   const { blogUrl } = getUrl();
+
   const userDetails = await fetchUserDetails();
   const { name: userName } = userDetails;
   try {
@@ -31,7 +32,6 @@ const publishBlog = async (postTitle, postBody, blogCoverImage) => {
       }
       const data = await response.json();
       console.log(data);
-      setTimeout(() => {}, 1000);
     }
   } catch (error) {
     console.log(error);

@@ -9,7 +9,7 @@ import slugify from "../../functions/slugify";
 const Blog = (props) => {
   const trimmedContent = shortenText(props.content);
   const sluggedTitle = slugify(props.title);
-  const url = `blogs/${sluggedTitle}/${props.id}`;
+  const url = `/blogs/${sluggedTitle}/${props.id}`;
   return (
     <div className="flex cursor-pointer flex-col gap-4 py-6  border-t border-b font-rubik lg:flex-row">
       <div className="flex flex-col gap-4 lg:w-8/12">

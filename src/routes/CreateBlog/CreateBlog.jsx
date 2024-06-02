@@ -2,12 +2,18 @@ import { useState } from "react";
 import ContentEditor from "./ContentEditor";
 import CreateBlogNavbar from "./CreateBlogNavbar";
 import HeaderInput from "./HeaderInput";
-import AddImage from "./AddImage";
+import { FaImage } from "react-icons/fa6";
+import DialogBox from "../../Components/DialogBox";
 
 const CreateBlog = () => {
   const [headerText, setHeaderText] = useState("");
   const [bodyText, setBodyText] = useState("");
   const [blogImage, setBlogImage] = useState();
+  const [showDialogBox, setShowDialogBox] = useState(false);
+
+  function toggleDialogBox() {
+    setShowDialogBox((prevState) => !prevState);
+  }
 
   return (
     <>
@@ -16,12 +22,27 @@ const CreateBlog = () => {
         postBody={bodyText}
         blogCoverImage={blogImage}
       />
-      <section className="bg-white flex flex-col py-10 px-10 gap-4 lg:px-0 lg:items-center ">
+      <section
+        className={`${
+          showDialogBox && " grayscale blur-sm min-h-screen"
+        } bg-white flex flex-col py-10 px-10 gap-10 relative lg:px-10 lg:items-center `}
+      >
         <HeaderInput headerText={headerText} setHeaderText={setHeaderText} />
-
+        {blogImage && <img src={blogImage} className="w-7/12" />}
+        <FaImage
+          className="text-4xl self-start text-gray-400 cursor-pointer"
+          onClick={toggleDialogBox}
+        />
         <ContentEditor bodyText={bodyText} setBodyText={setBodyText} />
-        <AddImage blogImage={blogImage} setBlogImage={setBlogImage} />
       </section>
+      {showDialogBox && (
+        <DialogBox
+          setBlogImage={setBlogImage}
+          blogImage={blogImage}
+          showDialogBox={showDialogBox}
+          toggleDialogBox={toggleDialogBox}
+        />
+      )}
     </>
   );
 };

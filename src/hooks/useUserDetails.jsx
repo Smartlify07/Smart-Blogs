@@ -2,16 +2,25 @@ import { useState, useEffect } from "react";
 import fetchUserDetails from "../functions/loaderfunctions/fetchUserDetails";
 
 const useUserDetails = () => {
-  const [userInitial, setUserInitial] = useState("");
+  const [userName, setUserName] = useState("");
+  const [isLoading, setIsLoading] = useState(true);
+
+  const userNameInitial = userName && userName[0];
   useEffect(() => {
     const getUserDetails = async () => {
-      const userData = await fetchUserDetails();
-      setUserInitial(userData.name[0].toUpperCase()); // Get the first letter of the name
+      try {
+        const userData = await fetchUserDetails();
+        setIsLoading(false);
+        setUserName(userData.name);
+      } catch (error) {
+        console.error(error);
+        setIsLoading(false);
+      }
     };
 
     getUserDetails();
   }, []);
-  return { userInitial };
+  return { userName, userNameInitial, isLoading };
 };
 
 export default useUserDetails;

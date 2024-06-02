@@ -1,7 +1,8 @@
 {
   "profile": {
     "name": "anosikeobinna",
-    "email": "anosike@gmail.com"
+    "email": "anosike@gmail.com",
+    "blogs": []
   },
   "blogs": [
     {
@@ -89,16 +90,41 @@
       ]
     },
     {
-      "id": "d3b1",
-      "createdAt": 1716761861236,
-      "title": "Hey there",
-      "content": "This is my blog",
+      "id": "4085",
+      "createdAt": 1716906172586,
+      "title": "Medium",
+      "content": "Holla",
       "user": {
         "name": "anosikeobinna",
         "userImage": ""
       },
       "upvotes": 0,
-      "blogCoverImage": "blob:http://localhost:5174/50203036-5a31-4b66-a466-338d0366be9d",
+      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1716906142/s22wkonf4cs2yzeutpjp.webp",
+      "comments": []
+    },
+    {
+      "id": "142b",
+      "createdAt": 1717098072105,
+      "title": "Test",
+      "content": "My story",
+      "user": {
+        "name": "anosikeobinna",
+        "userImage": ""
+      },
+      "upvotes": 0,
+      "comments": []
+    },
+    {
+      "id": "afb5",
+      "createdAt": 1717341102429,
+      "title": "My blog",
+      "content": "A new blog",
+      "user": {
+        "name": "anosikeobinna",
+        "userImage": ""
+      },
+      "upvotes": 0,
+      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717341081/bzshmqjxr6m67nmcwrp0.jpg",
       "comments": []
     }
   ]
