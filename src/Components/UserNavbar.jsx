@@ -30,7 +30,7 @@ const UserNavbar = () => {
             Write <FaPenNib />
           </Link>
 
-          <UserAvatar userInitial={userNameInitial} />
+          <UserAvatar userInitial={userNameInitial.toUpperCase()} />
         </div>
 
         <div className="flex flex-col gap-1 md:hidden">

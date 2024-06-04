@@ -1,4 +1,7 @@
+import getUrl from "./getUrl";
+
 export const handleSignUp = async ({ name, email }) => {
+  const { userProfileUrl } = getUrl();
   const dataToUpdate = {
     name: name,
     email: email,
@@ -10,7 +13,7 @@ export const handleSignUp = async ({ name, email }) => {
     },
     body: JSON.stringify(dataToUpdate),
   };
-  const response = await fetch("http://localhost:4000/profile", requestOptions);
+  const response = await fetch(userProfileUrl, requestOptions);
 
   if (!response.ok) {
     throw new Error("A problem occurred with that action " + response.status);

@@ -1,7 +1,7 @@
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Button from "../../Components/Button";
-import { handleSignUp } from "../../functions/handleSignUp";
+import { handleSignUp } from "../../functions/handleSignUp.js";
 import useAuthentication from "../../hooks/useAuthentication";
 
 const SignUp = () => {
