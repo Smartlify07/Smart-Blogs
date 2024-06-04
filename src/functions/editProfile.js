@@ -21,5 +21,5 @@ export const editProfile = async (name, bio, imageSrc) => {
   }
   const data = await response.json();
 
-  console.log(data);
+  console.log(data, imageSrc);
 };

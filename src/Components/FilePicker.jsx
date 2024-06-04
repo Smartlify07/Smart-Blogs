@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import { FaCamera } from "react-icons/fa6";
 
-const FilePicker = ({ imageSrc, setImgSrc }) => {
+const FilePicker = ({ setImgSrc }) => {
   const fileInputRef = useRef();
   const handleFileChange = (event) => {
     const file = event.target.files[0];
@@ -10,8 +10,6 @@ const FilePicker = ({ imageSrc, setImgSrc }) => {
       const reader = new FileReader();
       reader.onload = (e) => {
         setImgSrc(e.target.result);
-        console.log(e.target.result);
-        console.log(imageSrc); // Do something with the file content
       };
       reader.readAsDataURL(file); // You can use other methods like readAsDataURL for different file types
     }

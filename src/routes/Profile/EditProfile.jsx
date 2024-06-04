@@ -34,14 +34,26 @@ const EditProfile = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  const saveData = () => {
-    uploadImage(imageSrc ?? userProfileImage, cloudinaryImagesUrl, setImgSrc);
-    editProfile(formData.name, formData.bio, imageSrc ?? userProfileImage);
-    navigate("/dashboard");
-    window.location.reload();
+  const saveData = async () => {
+    let finalProfileImage = userProfileImage;
+    if (imageSrc) {
+      finalProfileImage = await uploadImage(
+        imageSrc ?? userProfileImage,
+        cloudinaryImagesUrl
+      );
+    }
+
+    await editProfile(formData.name, formData.bio, finalProfileImage);
+
+    console.log(finalProfileImage, imageSrc);
+
+    setTimeout(() => {
+      navigate("/dashboard");
+      window.location.reload();
+    }, 2000);
   };
 
-  console.log(imageSrc);
+  // console.log(imageSrc);
 
   return (
     <section className="py-10 flex font-rubik justify-center items-center">
@@ -77,7 +89,7 @@ const EditProfile = () => {
                 />
               )}
 
-              <FilePicker imageSrc={imageSrc} setImgSrc={setImgSrc} />
+              <FilePicker setImgSrc={setImgSrc} />
             </div>
           </div>
 

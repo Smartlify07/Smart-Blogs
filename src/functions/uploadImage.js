@@ -1,10 +1,6 @@
-export const uploadImage = async (
-  blogImage,
-  cloudinaryImagesUrl,
-  setBlogImage
-) => {
+export const uploadImage = async (imageSrc, cloudinaryImagesUrl) => {
   const formData = new FormData();
-  formData.append("file", blogImage);
+  formData.append("file", imageSrc);
   formData.append("upload_preset", "dylxjcob");
 
   const response = await fetch(cloudinaryImagesUrl, {
@@ -12,9 +8,8 @@ export const uploadImage = async (
     body: formData,
   });
 
-  console.log(blogImage);
+  console.log(imageSrc);
 
   const data = await response.json();
-  console.log(data);
-  setBlogImage(data.url);
+  return data.url;
 };
