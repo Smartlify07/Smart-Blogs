@@ -7,6 +7,7 @@ const HomeLayout = () => {
   const { isLoggedIn } = useAuthentication();
   const blogPosts = useLoaderData();
   console.log(blogPosts);
+  console.log(isLoggedIn);
 
   return (
     <>

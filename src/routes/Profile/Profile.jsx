@@ -1,14 +1,14 @@
 /* eslint-disable react/prop-types */
 import { FaStar } from "react-icons/fa6";
-import fetchBlogPosts from "../../functions/loaderfunctions/fetchBlogPosts";
 import Blog from "../../Components/Blogs/Blog";
 import useUserDetails from "../../hooks/useUserDetails";
 import { Link } from "react-router-dom";
-const blogs = await fetchBlogPosts();
 
 const Profile = () => {
-  const { userName, userNameInitial, userProfileImage } = useUserDetails();
-  const userBlogs = blogs.filter((blog) => blog.user.name === userName);
+  const { userName, userNameInitial, userProfileImage, userPosts } =
+    useUserDetails();
+  const userBlogs = userPosts.map((blog) => blog);
+  console.log(userBlogs);
 
   return (
     <section className=" px-3 font-rubik w-full flex flex-col gap-5  lg:gap-10 lg:px-20 lg:flex-row  lg:justify-between">

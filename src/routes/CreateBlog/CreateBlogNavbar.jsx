@@ -4,6 +4,7 @@ import UserAvatar from "../../Components/UserAvatar";
 import useUserDetails from "../../hooks/useUserDetails";
 import publishBlog from "../../functions/publishBlog";
 import { useNavigate } from "react-router-dom";
+import { addUserPost } from "../../functions/addUserPost";
 
 const CreateBlogNavbar = ({ postBody, postTitle, blogCoverImage }) => {
   const { userNameInitial } = useUserDetails();
@@ -21,6 +22,7 @@ const CreateBlogNavbar = ({ postBody, postTitle, blogCoverImage }) => {
             value="Publish"
             handleSubmit={async () => {
               await publishBlog(postTitle, postBody, blogCoverImage);
+              await addUserPost(postTitle, postBody, blogCoverImage);
               setTimeout(() => {
                 navigate("/");
               }, 1000);
