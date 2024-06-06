@@ -6,6 +6,7 @@ import { uploadImage } from "../functions/uploadImage";
 
 const AddImage = ({ blogImage, setBlogImage, toggleDialogBox }) => {
   const { cloudinaryImagesUrl } = getUrl();
+  console.log(blogImage);
   const [previewImage, setPreviewImage] = useState();
   const [showPreview, setShowPreview] = useState(false);
   const handleChange = (e) => {

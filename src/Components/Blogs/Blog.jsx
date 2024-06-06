@@ -10,7 +10,7 @@ import useUserDetails from "../../hooks/useUserDetails";
 const Blog = (props) => {
   const trimmedContent = shortenText(props.content);
   const { userProfileImage, userId } = useUserDetails();
-  console.log(userId, props.user);
+  console.log(props.user.id, userId, props.title);
 
   const sluggedTitle = slugify(props.title);
   const url = `/blogs/${sluggedTitle}/${props.id}`;

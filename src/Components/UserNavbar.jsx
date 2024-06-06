@@ -35,10 +35,12 @@ const UserNavbar = () => {
           )}
 
           {userProfileImage && (
-            <img
-              src={userProfileImage}
-              className="w-10 h-10 rounded-full object-cover"
-            />
+            <Link to={"/dashboard"} className="">
+              <img
+                className="w-10 h-10 rounded-full object-cover"
+                src={userProfileImage}
+              />
+            </Link>
           )}
         </div>
 

@@ -8,8 +8,12 @@ export const uploadImage = async (imageSrc, cloudinaryImagesUrl) => {
     body: formData,
   });
 
-  console.log(imageSrc);
+  if (!response.ok) {
+    throw new Error("Upload failed" + response.status);
+  }
 
   const data = await response.json();
+  console.log(data);
+
   return data.url;
 };

@@ -14,7 +14,6 @@ const useUserDetails = () => {
     const getUserDetails = async () => {
       try {
         const userData = await fetchUserDetails();
-        console.log(userData);
         setIsLoading(false);
         setUserName(userData.name);
         setBio(userData.bio);

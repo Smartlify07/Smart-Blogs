@@ -7,7 +7,7 @@ import { useNavigate } from "react-router-dom";
 import { addUserPost } from "../../functions/addUserPost";
 
 const CreateBlogNavbar = ({ postBody, postTitle, blogCoverImage }) => {
-  const { userNameInitial } = useUserDetails();
+  const { userNameInitial, userProfileImage } = useUserDetails();
   const navigate = useNavigate();
 
   return (
@@ -28,7 +28,15 @@ const CreateBlogNavbar = ({ postBody, postTitle, blogCoverImage }) => {
               }, 1000);
             }}
           />
-          <UserAvatar userInitial={userNameInitial.toUpperCase()} />
+          {!userProfileImage && (
+            <UserAvatar userInitial={userNameInitial.toUpperCase()} />
+          )}
+          {userProfileImage && (
+            <img
+              src={userProfileImage}
+              className="w-10 h-10 rounded-full object-cover"
+            />
+          )}
         </div>
       </div>
     </nav>

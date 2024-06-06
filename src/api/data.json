@@ -1,6 +1,6 @@
 {
   "current_user": {
-    "userId": "g4pgz77"
+    "userId": "5horudf"
   },
   "users": [
     {
@@ -35,37 +35,8 @@
           "content": "Text",
           "user": {
             "name": "Smartlify",
-            "userImage": ""
-          },
-          "upvotes": 0,
-          "comments": []
-        }
-      ]
-    },
-    {
-      "name": "Smartlify",
-      "bio": "Bio",
-      "userProfileImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717627406/ixdy090s1upitlxqlilw.jpg",
-      "id": "g4pgz77",
-      "posts": [
-        {
-          "createdAt": 1717627717693,
-          "title": "A blog",
-          "content": "Wow",
-          "user": {
-            "name": "Smartlify",
-            "userImage": ""
-          },
-          "upvotes": 0,
-          "comments": []
-        },
-        {
-          "createdAt": 1717628012441,
-          "title": "Smartlify",
-          "content": "Blog",
-          "user": {
-            "name": "Smartlify",
-            "userImage": ""
+            "userImage": "",
+            "id": "5horudf"
           },
           "upvotes": 0,
           "comments": []
@@ -159,16 +130,17 @@
       ]
     },
     {
-      "id": "8f0a",
-      "createdAt": 1717628012401,
-      "title": "Smartlify",
+      "id": "2b4a",
+      "createdAt": 1717635034255,
+      "title": "Blog",
       "content": "Blog",
       "user": {
         "name": "Smartlify",
         "userImage": "",
-        "id": "g4pgz77"
+        "id": "5horudf"
       },
       "upvotes": 0,
+      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717635010/ayzs9a26vsp2qr2x6v1c.webp",
       "comments": []
     }
   ]

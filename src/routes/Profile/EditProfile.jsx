@@ -89,7 +89,7 @@ const EditProfile = () => {
                 />
               )}
 
-              <FilePicker setImgSrc={setImgSrc} />
+              <FilePicker positioned={true} setImgSrc={setImgSrc} />
             </div>
           </div>
 
