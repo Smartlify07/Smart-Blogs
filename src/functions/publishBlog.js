@@ -2,10 +2,13 @@ import getUrl from "./getUrl";
 import fetchUserDetails from "./loaderfunctions/fetchUserDetails";
 
 const publishBlog = async (postTitle, postBody, blogCoverImage) => {
-  const { blogUrl } = getUrl();
+  const { blogUrl, currentUserUrl } = getUrl();
 
   const userDetails = await fetchUserDetails();
   const { name: userName } = userDetails;
+
+  const currentUserResponse = await fetch(currentUserUrl);
+  const { userId } = await currentUserResponse.json();
   try {
     if (postBody !== "" || postTitle !== "") {
       const options = {
@@ -20,6 +23,7 @@ const publishBlog = async (postTitle, postBody, blogCoverImage) => {
           user: {
             name: userName,
             userImage: "",
+            id: userId,
           },
           upvotes: 0,
           blogCoverImage: blogCoverImage,

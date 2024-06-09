@@ -1,19 +1,59 @@
 import { useState } from "react";
 import useUserDetails from "../../hooks/useUserDetails";
+import { editProfile } from "../../functions/editProfile";
+import { useNavigate } from "react-router-dom";
+import FilePicker from "../../Components/FilePicker";
+import getUrl from "../../functions/getUrl";
+import { uploadImage } from "../../functions/uploadImage";
 
 const EditProfile = () => {
-  const { userName, isLoading } = useUserDetails();
-  console.log(isLoading, userName);
+  const { userName, userNameInitial, isLoading, bio, userProfileImage } =
+    useUserDetails();
+  const { cloudinaryImagesUrl } = getUrl();
+
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
-    name: isLoading ? "o" : userName.toString(),
+    name: "",
     bio: "",
+    userProfileImage: null,
   });
+
+  const [imageSrc, setImgSrc] = useState(null);
+
+  if (!isLoading && formData.name === "") {
+    setFormData({
+      ...formData,
+      name: userName,
+      bio: bio,
+      userProfileImage: imageSrc,
+    });
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-  console.log(formData);
+
+  const saveData = async () => {
+    let finalProfileImage = userProfileImage;
+    if (imageSrc) {
+      finalProfileImage = await uploadImage(
+        imageSrc ?? userProfileImage,
+        cloudinaryImagesUrl
+      );
+    }
+
+    await editProfile(formData.name, formData.bio, finalProfileImage);
+
+    console.log(finalProfileImage, imageSrc);
+
+    setTimeout(() => {
+      navigate("/dashboard");
+      window.location.reload();
+    }, 2000);
+  };
+
+  // console.log(imageSrc);
 
   return (
     <section className="py-10 flex font-rubik justify-center items-center">
@@ -22,20 +62,38 @@ const EditProfile = () => {
           Profile Information
         </h2>
 
-        <div className="flex items-center  gap-5">
+        <div className="flex items-center gap-5">
           <div className="flex flex-col gap-1 items-center">
             <p className="text-[#555] mt-4">Photo</p>
 
-            <div className="w-16 h-16 rounded-full bg-malachite text-white flex items-center justify-center">
-              <h1 className="text-2xl font-semibold">A</h1>
+            <div className="w-16 h-16 rounded-full relative bg-malachite text-white flex items-center justify-center">
+              {!imageSrc && !userProfileImage && (
+                <h1 className="text-2xl font-semibold">
+                  {userNameInitial.toUpperCase()}
+                </h1>
+              )}
+
+              {!imageSrc && userProfileImage && (
+                <img
+                  src={userProfileImage}
+                  className="w-16 h-16 object-cover rounded-full"
+                  alt="user-profile-image"
+                />
+              )}
+
+              {imageSrc && (
+                <img
+                  src={imageSrc}
+                  className="w-16 h-16 object-cover rounded-full"
+                  alt="user-profile-image"
+                />
+              )}
+
+              <FilePicker positioned={true} setImgSrc={setImgSrc} />
             </div>
           </div>
 
-          <div className="flex-col gap-8 mt-5 h-full">
-            <div className="flex items-center gap-4">
-              <button className="text-seagreen">Update</button>
-              <button className="text-red-500">Remove</button>
-            </div>
+          <div className="mt-5">
             <p className="text-sm  text-[#444]">
               Upload a clear image of yourself
             </p>
@@ -74,7 +132,10 @@ const EditProfile = () => {
           <button className="rounded-2xl px-6 text-sm py-2 border border-seagreen hover:bg-pakistangreen hover:text-white transition-all">
             Cancel
           </button>
-          <button className="rounded-2xl px-6 text-sm py-2 bg-seagreen text-white hover:bg-pakistangreen transition-all">
+          <button
+            onClick={() => saveData()}
+            className="rounded-2xl px-6 text-sm py-2 bg-seagreen text-white hover:bg-pakistangreen transition-all"
+          >
             Save
           </button>
         </div>

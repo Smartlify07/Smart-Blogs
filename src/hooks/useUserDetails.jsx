@@ -4,6 +4,10 @@ import fetchUserDetails from "../functions/loaderfunctions/fetchUserDetails";
 const useUserDetails = () => {
   const [userName, setUserName] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [bio, setBio] = useState("");
+  const [userProfileImage, setUserProfileImage] = useState(null);
+  const [userPosts, setUserPosts] = useState([]);
+  const [userId, setUserId] = useState(null);
 
   const userNameInitial = userName && userName[0];
   useEffect(() => {
@@ -12,6 +16,10 @@ const useUserDetails = () => {
         const userData = await fetchUserDetails();
         setIsLoading(false);
         setUserName(userData.name);
+        setBio(userData.bio);
+        setUserProfileImage(userData.userProfileImage);
+        setUserPosts(userData.posts);
+        setUserId(userData.id);
       } catch (error) {
         console.error(error);
         setIsLoading(false);
@@ -20,7 +28,15 @@ const useUserDetails = () => {
 
     getUserDetails();
   }, []);
-  return { userName, userNameInitial, isLoading };
+  return {
+    userName,
+    userNameInitial,
+    bio,
+    isLoading,
+    userProfileImage,
+    userPosts,
+    userId,
+  };
 };
 
 export default useUserDetails;

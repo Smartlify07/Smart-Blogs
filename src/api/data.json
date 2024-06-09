@@ -1,9 +1,61 @@
 {
-  "profile": {
-    "name": "anosikeobinna",
-    "email": "anosike@gmail.com",
-    "blogs": []
+  "current_user": {
+    "userId": "5horudf"
   },
+  "users": [
+    {
+      "id": "88ay2vc",
+      "name": "Obinna Anosike",
+      "email": "anosikeobinna895@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": [
+        {
+          "createdAt": 1717621563978,
+          "title": "Malachite",
+          "content": "Calachite",
+          "user": {
+            "name": "Obinna Anosike",
+            "userImage": ""
+          },
+          "upvotes": 0,
+          "comments": []
+        }
+      ]
+    },
+    {
+      "name": "Smartlify",
+      "bio": "A bio",
+      "userProfileImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717625978/lqhi7k0pwnvjl9jrltd2.webp",
+      "id": "5horudf",
+      "posts": [
+        {
+          "createdAt": 1717626026815,
+          "title": "A text",
+          "content": "Text",
+          "user": {
+            "name": "Smartlify",
+            "userImage": "",
+            "id": "5horudf"
+          },
+          "upvotes": 0,
+          "comments": []
+        },
+        {
+          "createdAt": 1717889288606,
+          "title": "New post",
+          "content": "My very new post I'm so proud of myself ",
+          "user": {
+            "name": "Smartlify",
+            "userImage": ""
+          },
+          "upvotes": 0,
+          "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717889265/uj8qg3jml0ugvklw4j6q.jpg",
+          "comments": []
+        }
+      ]
+    }
+  ],
   "blogs": [
     {
       "id": "1",
@@ -90,41 +142,31 @@
       ]
     },
     {
-      "id": "4085",
-      "createdAt": 1716906172586,
-      "title": "Medium",
-      "content": "Holla",
+      "id": "2b4a",
+      "createdAt": 1717635034255,
+      "title": "Blog",
+      "content": "Blog",
       "user": {
-        "name": "anosikeobinna",
-        "userImage": ""
+        "name": "Smartlify",
+        "userImage": "",
+        "id": "5horudf"
       },
       "upvotes": 0,
-      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1716906142/s22wkonf4cs2yzeutpjp.webp",
+      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717635010/ayzs9a26vsp2qr2x6v1c.webp",
       "comments": []
     },
     {
-      "id": "142b",
-      "createdAt": 1717098072105,
-      "title": "Test",
-      "content": "My story",
+      "id": "e61d",
+      "createdAt": 1717889288533,
+      "title": "New post",
+      "content": "My very new post I'm so proud of myself ",
       "user": {
-        "name": "anosikeobinna",
-        "userImage": ""
+        "name": "Smartlify",
+        "userImage": "",
+        "id": "5horudf"
       },
       "upvotes": 0,
-      "comments": []
-    },
-    {
-      "id": "afb5",
-      "createdAt": 1717341102429,
-      "title": "My blog",
-      "content": "A new blog",
-      "user": {
-        "name": "anosikeobinna",
-        "userImage": ""
-      },
-      "upvotes": 0,
-      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717341081/bzshmqjxr6m67nmcwrp0.jpg",
+      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717889265/uj8qg3jml0ugvklw4j6q.jpg",
       "comments": []
     }
   ]

@@ -2,9 +2,11 @@
 import { useState } from "react";
 import Button from "./Button";
 import getUrl from "../functions/getUrl";
+import { uploadImage } from "../functions/uploadImage";
 
 const AddImage = ({ blogImage, setBlogImage, toggleDialogBox }) => {
   const { cloudinaryImagesUrl } = getUrl();
+  console.log(blogImage);
   const [previewImage, setPreviewImage] = useState();
   const [showPreview, setShowPreview] = useState(false);
   const handleChange = (e) => {
@@ -13,21 +15,6 @@ const AddImage = ({ blogImage, setBlogImage, toggleDialogBox }) => {
   };
   const toggleImagePreview = () => {
     setShowPreview((prevState) => !prevState);
-  };
-  //Upload image to cloudinary
-  const uploadImage = async () => {
-    const formData = new FormData();
-    formData.append("file", blogImage);
-    formData.append("upload_preset", "dylxjcob");
-
-    const response = await fetch(cloudinaryImagesUrl, {
-      method: "POST",
-      body: formData,
-    });
-
-    const data = await response.json();
-    console.log(data);
-    setBlogImage(data.url);
   };
 
   return (
@@ -53,7 +40,7 @@ const AddImage = ({ blogImage, setBlogImage, toggleDialogBox }) => {
         <div className="w-7/12">
           <Button
             handleSubmit={() => {
-              uploadImage();
+              uploadImage(blogImage, cloudinaryImagesUrl, setBlogImage);
               toggleDialogBox();
             }}
             value={"Upload image"}
