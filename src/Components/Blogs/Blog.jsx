@@ -10,7 +10,6 @@ import useUserDetails from "../../hooks/useUserDetails";
 const Blog = (props) => {
   const trimmedContent = shortenText(props.content);
   const { userProfileImage, userId } = useUserDetails();
-  console.log(props.user.id, userId, props.title);
 
   const sluggedTitle = slugify(props.title);
   const url = `/blogs/${sluggedTitle}/${props.id}`;
@@ -31,7 +30,7 @@ const Blog = (props) => {
             </h1>
           )}
 
-          {props.user.id === userId && (
+          {props.user.id === userId && ( 
             <img
               className="w-10 h-10 rounded-[50%] object-cover"
               src={userProfileImage}

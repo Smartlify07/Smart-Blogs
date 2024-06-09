@@ -4,11 +4,14 @@ import formatDate from "../../functions/dateFormatter";
 import Button from "../../Components/Button";
 import { FaHandsClapping, FaRegComment } from "react-icons/fa6";
 import { MdOutlineBookmarkAdd } from "react-icons/md";
+import useUserDetails from "../../hooks/useUserDetails";
 
 const BlogDetails = () => {
   const blog = useLoaderData();
 
   const { title, blogCoverImage, content, createdAt, user } = blog;
+  const { userProfileImage } = useUserDetails();
+  console.log(user);
 
   return (
     <section className=" font-rubik px-6 py-14 mb-10 lg:px-20">
@@ -21,7 +24,7 @@ const BlogDetails = () => {
 
         <div className="flex items-center gap-3">
           <img
-            src={user.userImage}
+            src={user.userImage || userProfileImage}
             className="w-10 h-10 rounded-full object-cover "
           />
 
@@ -55,7 +58,7 @@ const BlogDetails = () => {
       <section className="bg-gray-100 flex flex-col  items-center gap-6 py-10 px-20 mt-10 lg:py-20 lg:gap-24 lg:flex-row lg:justify-center">
         <div className="flex items-center flex-col gap-3 lg:items-start">
           <img
-            src={user.userImage}
+            src={user.userImage || userProfileImage}
             className="w-16 h-16 rounded-full object-cover lg:w-20 lg:h-20 "
             alt=""
           />

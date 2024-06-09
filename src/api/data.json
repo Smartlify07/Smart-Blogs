@@ -40,6 +40,18 @@
           },
           "upvotes": 0,
           "comments": []
+        },
+        {
+          "createdAt": 1717889288606,
+          "title": "New post",
+          "content": "My very new post I'm so proud of myself ",
+          "user": {
+            "name": "Smartlify",
+            "userImage": ""
+          },
+          "upvotes": 0,
+          "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717889265/uj8qg3jml0ugvklw4j6q.jpg",
+          "comments": []
         }
       ]
     }
@@ -141,6 +153,20 @@
       },
       "upvotes": 0,
       "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717635010/ayzs9a26vsp2qr2x6v1c.webp",
+      "comments": []
+    },
+    {
+      "id": "e61d",
+      "createdAt": 1717889288533,
+      "title": "New post",
+      "content": "My very new post I'm so proud of myself ",
+      "user": {
+        "name": "Smartlify",
+        "userImage": "",
+        "id": "5horudf"
+      },
+      "upvotes": 0,
+      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717889265/uj8qg3jml0ugvklw4j6q.jpg",
       "comments": []
     }
   ]
