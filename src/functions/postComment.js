@@ -40,10 +40,9 @@ export const postComment = async (id, content, userName, setNewComments) => {
     const commentsResponse = await fetch(blogUrl + id, requestOptions);
     if (!commentsResponse.ok) {
       throw new Error("Unable to make such request" + commentsResponse.status);
+    } else {
+      setNewComments(updatedComments);
     }
-
-    const commentsData = await commentsResponse.json();
-    setNewComments(updatedComments);
   } catch (error) {
     console.error(error);
   }

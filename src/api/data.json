@@ -69,26 +69,62 @@
       "upvotes": 1500,
       "blogCoverImage": "/images/blogs/covers/introtoblogging.jpg",
       "comments": [
-        [
-          {
-            "comment_id": 1,
-            "username": "user123",
-            "content": "Great post! Really enjoyed reading it.",
-            "timestamp": "2024-05-23T10:00:00Z"
-          },
-          {
-            "comment_id": 2,
-            "username": "blogger456",
-            "content": "I disagree with your point about X, but overall good article.",
-            "timestamp": "2024-05-23T11:15:00Z"
-          },
-          {
-            "comment_id": 3,
-            "username": "reader789",
-            "content": "Can you provide more details on Y? Thanks!",
-            "timestamp": "2024-05-23T12:30:00Z"
-          }
-        ]
+        {
+          "comment_id": 1,
+          "username": "user123",
+          "content": "Great post! Really enjoyed reading it.",
+          "timestamp": "2024-05-23T10:00:00Z",
+          "replies": [
+            {
+              "reply_id": "o9eiozd",
+              "content": "Hey",
+              "username": "Smartlify",
+              "timestamp": 1718135207853
+            }
+          ]
+        },
+        {
+          "comment_id": 2,
+          "username": "blogger456",
+          "content": "I disagree with your point about X, but overall good article.",
+          "timestamp": "2024-05-23T11:15:00Z",
+          "replies": []
+        },
+        {
+          "comment_id": 3,
+          "username": "reader789",
+          "content": "Can you provide more details on Y? Thanks!",
+          "timestamp": "2024-05-23T12:30:00Z",
+          "replies": []
+        },
+        {
+          "comment_id": "5rbzscb",
+          "content": "Reply and comment",
+          "username": "Smartlify",
+          "timestamp": 1718121850017,
+          "replies": []
+        },
+        {
+          "comment_id": "bhh3vmv",
+          "content": "Msg",
+          "username": "Smartlify",
+          "timestamp": 1718122464831,
+          "replies": []
+        },
+        {
+          "comment_id": "qb3avbe",
+          "content": "Mg",
+          "username": "Smartlify",
+          "timestamp": 1718122476338,
+          "replies": []
+        },
+        {
+          "comment_id": "a479m8p",
+          "content": "Men",
+          "username": "Smartlify",
+          "timestamp": 1718143582794,
+          "replies":[]
+        }
       ]
     },
     {
@@ -107,13 +143,15 @@
           "comment_id": 1,
           "username": "user101",
           "content": "This was very informative, thanks for sharing.",
-          "timestamp": "2024-05-23T13:45:00Z"
+          "timestamp": "2024-05-23T13:45:00Z",
+          "replies": []
         },
         {
           "comment_id": 2,
           "username": "guest202",
           "content": "I found some typos in the article. Please review.",
-          "timestamp": "2024-05-23T14:00:00Z"
+          "timestamp": "2024-05-23T14:00:00Z",
+          "replies": []
         }
       ]
     },
@@ -133,13 +171,15 @@
           "comment_id": 1,
           "username": "user101",
           "content": "This was very informative.",
-          "timestamp": "2024-05-23T13:45:00Z"
+          "timestamp": "2024-05-23T13:45:00Z",
+          "replies": []
         },
         {
           "comment_id": 2,
           "username": "guest202",
           "content": "I found some typos in the article.",
-          "timestamp": "2024-05-23T14:00:00Z"
+          "timestamp": "2024-05-23T14:00:00Z",
+          "replies": []
         }
       ]
     },
@@ -160,67 +200,78 @@
           "comment_id": "3o5i64g",
           "content": "Mech",
           "username": "Smartlify",
-          "timestamp": 1718043662094
+          "timestamp": 1718043662094,
+          "replies": []
         },
         {
           "comment_id": "x8p2ccw",
           "content": "Mechan",
           "username": "Smartlify",
-          "timestamp": 1718052709340
+          "timestamp": 1718052709340,
+          "replies": []
         },
         {
           "comment_id": "7dgucxy",
           "content": "New",
           "username": "Smartlify",
-          "timestamp": 1718052776708
+          "timestamp": 1718052776708,
+          "replies": []
         },
         {
           "comment_id": "k8uhw3l",
           "content": "Men",
           "username": "Smartlify",
-          "timestamp": 1718053053656
+          "timestamp": 1718053053656,
+          "replies": []
         },
         {
           "comment_id": "qbylohn",
           "content": "Men",
           "username": "Smartlify",
-          "timestamp": 1718053278471
+          "timestamp": 1718053278471,
+          "replies": []
         },
         {
           "comment_id": "8sup6u8",
           "content": "Mens",
           "username": "Smartlify",
-          "timestamp": 1718053325421
+          "timestamp": 1718053325421,
+          "replies": []
         },
         {
           "comment_id": "57y9c5v",
           "content": "Ow",
           "username": "Smartlify",
-          "timestamp": 1718053366268
+          "timestamp": 1718053366268,
+          "replies": []
         },
         {
           "comment_id": "00xhdtz",
           "content": "Owie",
           "username": "Smartlify",
-          "timestamp": 1718053698375
+          "timestamp": 1718053698375,
+          "replies": []
         },
         {
           "comment_id": "7ch73yq",
           "content": "Owiefh",
           "username": "Smartlify",
-          "timestamp": 1718053747997
+          "timestamp": 1718053747997,
+          "replies": []
         },
         {
           "comment_id": "1otgtwt",
           "content": "Wtf are you doing??",
           "username": "Smartlify",
-          "timestamp": 1718094071961
+          "timestamp": 1718094071961,
+          "replies": []
         },
         {
           "comment_id": "wwjevxt",
           "content": "",
           "username": "Smartlify",
-          "timestamp": 1718119235592
+          "timestamp": 1718119235592,
+          "replies": []
         }
       ]
     },
@@ -241,13 +292,15 @@
           "comment_id": "60n58d7",
           "content": "Hey there",
           "username": "Smartlify",
-          "timestamp": 1718054541211
+          "timestamp": 171805454x1211,
+          "replies": []
         },
         {
           "comment_id": "0696ctb",
           "content": "How's it going",
           "username": "Smartlify",
-          "timestamp": 1718054551886
+          "timestamp": 1718054551886,
+          "replies": []
         }
       ]
     }

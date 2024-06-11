@@ -10,8 +10,6 @@ const Comments = () => {
   const [newComments, setNewComments] = useState(comments);
   const numberOfComments = newComments.length;
 
-  console.log(newComments);
-
   return (
     <section className="">
       <div className="my-4">
@@ -22,7 +20,11 @@ const Comments = () => {
       </h1>
       <div className="flex flex-col gap-3">
         {newComments.map((comment) => (
-          <Comment key={comment.id} {...comment} />
+          <Comment
+            setNewComments={setNewComments}
+            key={comment.id}
+            {...comment}
+          />
         ))}
       </div>
     </section>
