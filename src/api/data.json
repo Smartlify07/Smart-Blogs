@@ -69,24 +69,26 @@
       "upvotes": 1500,
       "blogCoverImage": "/images/blogs/covers/introtoblogging.jpg",
       "comments": [
-        {
-          "comment_id": 1,
-          "username": "user123",
-          "content": "Great post! Really enjoyed reading it.",
-          "timestamp": "2024-05-23T10:00:00Z"
-        },
-        {
-          "comment_id": 2,
-          "username": "blogger456",
-          "content": "I disagree with your point about X, but overall good article.",
-          "timestamp": "2024-05-23T11:15:00Z"
-        },
-        {
-          "comment_id": 3,
-          "username": "reader789",
-          "content": "Can you provide more details on Y? Thanks!",
-          "timestamp": "2024-05-23T12:30:00Z"
-        }
+        [
+          {
+            "comment_id": 1,
+            "username": "user123",
+            "content": "Great post! Really enjoyed reading it.",
+            "timestamp": "2024-05-23T10:00:00Z"
+          },
+          {
+            "comment_id": 2,
+            "username": "blogger456",
+            "content": "I disagree with your point about X, but overall good article.",
+            "timestamp": "2024-05-23T11:15:00Z"
+          },
+          {
+            "comment_id": 3,
+            "username": "reader789",
+            "content": "Can you provide more details on Y? Thanks!",
+            "timestamp": "2024-05-23T12:30:00Z"
+          }
+        ]
       ]
     },
     {
@@ -153,7 +155,74 @@
       },
       "upvotes": 0,
       "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717635010/ayzs9a26vsp2qr2x6v1c.webp",
-      "comments": []
+      "comments": [
+        {
+          "comment_id": "3o5i64g",
+          "content": "Mech",
+          "username": "Smartlify",
+          "timestamp": 1718043662094
+        },
+        {
+          "comment_id": "x8p2ccw",
+          "content": "Mechan",
+          "username": "Smartlify",
+          "timestamp": 1718052709340
+        },
+        {
+          "comment_id": "7dgucxy",
+          "content": "New",
+          "username": "Smartlify",
+          "timestamp": 1718052776708
+        },
+        {
+          "comment_id": "k8uhw3l",
+          "content": "Men",
+          "username": "Smartlify",
+          "timestamp": 1718053053656
+        },
+        {
+          "comment_id": "qbylohn",
+          "content": "Men",
+          "username": "Smartlify",
+          "timestamp": 1718053278471
+        },
+        {
+          "comment_id": "8sup6u8",
+          "content": "Mens",
+          "username": "Smartlify",
+          "timestamp": 1718053325421
+        },
+        {
+          "comment_id": "57y9c5v",
+          "content": "Ow",
+          "username": "Smartlify",
+          "timestamp": 1718053366268
+        },
+        {
+          "comment_id": "00xhdtz",
+          "content": "Owie",
+          "username": "Smartlify",
+          "timestamp": 1718053698375
+        },
+        {
+          "comment_id": "7ch73yq",
+          "content": "Owiefh",
+          "username": "Smartlify",
+          "timestamp": 1718053747997
+        },
+        {
+          "comment_id": "1otgtwt",
+          "content": "Wtf are you doing??",
+          "username": "Smartlify",
+          "timestamp": 1718094071961
+        },
+        {
+          "comment_id": "wwjevxt",
+          "content": "",
+          "username": "Smartlify",
+          "timestamp": 1718119235592
+        }
+      ]
     },
     {
       "id": "e61d",
@@ -167,7 +236,20 @@
       },
       "upvotes": 0,
       "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717889265/uj8qg3jml0ugvklw4j6q.jpg",
-      "comments": []
+      "comments": [
+        {
+          "comment_id": "60n58d7",
+          "content": "Hey there",
+          "username": "Smartlify",
+          "timestamp": 1718054541211
+        },
+        {
+          "comment_id": "0696ctb",
+          "content": "How's it going",
+          "username": "Smartlify",
+          "timestamp": 1718054551886
+        }
+      ]
     }
   ]
 }
