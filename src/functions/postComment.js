@@ -23,6 +23,7 @@ export const postComment = async (id, content, userName, setNewComments) => {
       content: content,
       username: userName,
       timestamp: Date.now(),
+      replies: [],
     };
 
     const updatedComments = [...prevComments, newComment];
