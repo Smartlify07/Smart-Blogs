@@ -87,7 +87,7 @@ const BlogDetails = () => {
       <div
         className={`bg-white absolute transition-all ease-out top-0 right-0 transform ${
           showComments ? "translate-x-0 w-full lg:w-1/3" : "translate-x-[300%]"
-        } py-6 px-6 shadow-xl h-full lg:h-auto overflow-y-scroll`}
+        } py-6 px-6 shadow-2xl h-full lg:h-screen overflow-y-scroll`}
       >
         <FaX
           onClick={toggleComments}

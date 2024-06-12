@@ -16,12 +16,13 @@ import CreateBlog from "./routes/CreateBlog/CreateBlog";
 import FetchErrorPage from "./routes/ErrorPages/FetchErrorPage";
 import ProfileLayout from "./layout/ProfileLayout";
 import EditProfile from "./routes/Profile/EditProfile";
+import SearchValueProvider from "./Context/SearchValueContext";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <>
-        <Route element={<RootLayout />}>
+        <Route element={<RootLayout />} loader={fetchBlogPosts}>
           <Route
             path="/"
             index
@@ -47,7 +48,9 @@ function App() {
   return (
     <>
       <AuthenticationProvider>
-        <RouterProvider router={router} />
+        <SearchValueProvider>
+          <RouterProvider router={router} />
+        </SearchValueProvider>
       </AuthenticationProvider>
     </>
   );
