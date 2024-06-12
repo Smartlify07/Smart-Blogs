@@ -2,8 +2,8 @@
 import { useState } from "react";
 import useUserDetails from "../../hooks/useUserDetails";
 import UserAvatar from "../UserAvatar";
-import { postComment } from "../../functions/postComment";
-const CommentForm = ({ blogId, setNewComments }) => {
+import { postReply } from "../../functions/postReply";
+const ReplyForm = ({ blogId, commentId, setNewComments, showReplyForm }) => {
   const { userName, userNameInitial } = useUserDetails();
   const [message, setMessage] = useState("");
 
@@ -13,7 +13,7 @@ const CommentForm = ({ blogId, setNewComments }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    postComment(blogId, message, userName, setNewComments);
+    postReply(blogId, commentId, message, userName, setNewComments);
     setMessage("");
   };
 
@@ -24,7 +24,9 @@ const CommentForm = ({ blogId, setNewComments }) => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full bg-white shadow-md py-4 px-5 rounded-sm"
+      className={`w-full ${
+        !showReplyForm && `hidden`
+      } bg-white shadow-md py-4 px-5 rounded-sm`}
     >
       <div className="flex items-center gap-3">
         <UserAvatar userInitial={userNameInitial} />
@@ -58,4 +60,4 @@ const CommentForm = ({ blogId, setNewComments }) => {
   );
 };
 
-export default CommentForm;
+export default ReplyForm;

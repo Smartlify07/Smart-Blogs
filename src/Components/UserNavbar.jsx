@@ -2,9 +2,17 @@ import { FaPenNib } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import useUserDetails from "../hooks/useUserDetails";
 import UserAvatar from "./UserAvatar";
+import useSearchValues from "../hooks/useSearchValues";
 
 const UserNavbar = () => {
   const { userNameInitial, userProfileImage } = useUserDetails();
+
+  const { searchValue, setSearchValue } = useSearchValues();
+
+  console.log(searchValue);
+  const handleChange = (e) => {
+    setSearchValue(e.target.value);
+  };
   return (
     <nav className="py-5 px-5 bg-white border-b font-rubik lg:py-4 lg:px-10">
       <nav className="flex items-center justify-between">
@@ -18,6 +26,8 @@ const UserNavbar = () => {
               type="search"
               className="bg-[#f6f6f6] hidden py-3 px-7 rounded-3xl text-black font-rubik placeholder:text-gray-500 placeholder:text-base focus:border-none focus:outline-none lg:inline"
               placeholder="Search"
+              value={searchValue}
+              onChange={handleChange}
             />
           </div>
         </div>
