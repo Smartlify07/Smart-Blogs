@@ -15,7 +15,6 @@ const updateCurrentUser = async (id) => {
   if (!response.ok) {
     throw new Error("Couldn't make such request" + response.status);
   }
-  console.log(await response.json());
 
   return id;
 };

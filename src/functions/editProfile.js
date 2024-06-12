@@ -23,7 +23,4 @@ export const editProfile = async (name, bio, imageSrc) => {
   if (!response.ok) {
     throw new Error("A problem occurred with that action " + response.status);
   }
-  const data = await response.json();
-
-  console.log(data, imageSrc);
 };

@@ -34,8 +34,6 @@ const publishBlog = async (postTitle, postBody, blogCoverImage) => {
       if (!response.ok) {
         throw new Error("Couldn't make such request");
       }
-      const data = await response.json();
-      console.log(data);
     }
   } catch (error) {
     console.log(error);

@@ -16,7 +16,6 @@ export const postComment = async (id, content, userName, setNewComments) => {
     const { comments } = data;
 
     const prevComments = [...comments];
-    console.log(prevComments);
 
     const newComment = {
       comment_id: uId,
@@ -27,7 +26,6 @@ export const postComment = async (id, content, userName, setNewComments) => {
     };
 
     const updatedComments = [...prevComments, newComment];
-    console.log(updatedComments);
     const requestOptions = {
       method: "PATCH",
       headers: {
