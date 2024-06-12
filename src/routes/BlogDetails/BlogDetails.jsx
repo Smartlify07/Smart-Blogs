@@ -20,8 +20,6 @@ const BlogDetails = () => {
     setShowComments((prevState) => !prevState);
   };
 
-  console.log(showComments);
-
   return (
     <section className=" font-rubik px-6 py-14 mb-10 relative  w-full  flex gap-3 overflow-x-hidden  lg:px-20">
       <div className="w-full ">

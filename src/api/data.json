@@ -52,6 +52,18 @@
           "upvotes": 0,
           "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717889265/uj8qg3jml0ugvklw4j6q.jpg",
           "comments": []
+        },
+        {
+          "createdAt": 1718197908807,
+          "title": "My new blog write",
+          "content": "Medigar",
+          "user": {
+            "name": "Smartlify",
+            "userImage": ""
+          },
+          "upvotes": 0,
+          "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1718197896/wsecsfekicxpypzab2ti.webp",
+          "comments": []
         }
       ]
     }
@@ -81,7 +93,20 @@
           "username": "blogger456",
           "content": "I disagree with your point about X, but overall good article.",
           "timestamp": "2024-05-23T11:15:00Z",
-          "replies": []
+          "replies": [
+            {
+              "reply_id": "ckhmyzi",
+              "content": "mmq",
+              "username": "Smartlify",
+              "timestamp": 1718189249649
+            },
+            {
+              "reply_id": "ezdlkbh",
+              "content": "mmt",
+              "username": "Smartlify",
+              "timestamp": 1718189272344
+            }
+          ]
         },
         {
           "comment_id": 3,
@@ -305,11 +330,25 @@
         {
           "comment_id": "0696ctb",
           "content": "How's it going",
+          "replies": [],
           "username": "Smartlify",
-          "timestamp": 1718054551886,
-          "replies": []
+          "timestamp": 1718054551886
         }
       ]
+    },
+    {
+      "id": "26d6",
+      "createdAt": 1718197908707,
+      "title": "My new blog write",
+      "content": "Medigar",
+      "user": {
+        "name": "Smartlify",
+        "userImage": "",
+        "id": "5horudf"
+      },
+      "upvotes": 0,
+      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1718197896/wsecsfekicxpypzab2ti.webp",
+      "comments": []
     }
   ]
 }
