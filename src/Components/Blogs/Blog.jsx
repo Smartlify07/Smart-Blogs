@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import shortenText from "../../functions/shortenText";
-import { BsArrowRight } from "react-icons/bs";
 import LazyLoad from "react-lazyload";
 import formatDate from "../../functions/dateFormatter";
 import slugify from "../../functions/slugify";
@@ -14,7 +13,10 @@ const Blog = (props) => {
   const sluggedTitle = slugify(props.title);
   const url = `/blogs/${sluggedTitle}/${props.id}`;
   return (
-    <div className="flex cursor-pointer flex-col gap-4 py-6  border-t border-b font-rubik lg:flex-row">
+    <Link
+      to={url}
+      className="flex cursor-pointer flex-col gap-4 py-6  border-t border-b font-rubik lg:flex-row"
+    >
       <div className="flex flex-col gap-4 lg:w-8/12">
         <div className="flex items-center gap-3">
           {props.user.userImage && (
@@ -30,7 +32,7 @@ const Blog = (props) => {
             </h1>
           )}
 
-          {props.user.id === userId && ( 
+          {props.user.id === userId && (
             <img
               className="w-10 h-10 rounded-[50%] object-cover"
               src={userProfileImage}
@@ -49,13 +51,6 @@ const Blog = (props) => {
             {trimmedContent} ...
           </p>
         </div>
-
-        <Link
-          to={url}
-          className="text-seagreen flex gap-2 items-center text-sm font-regular"
-        >
-          Read more <BsArrowRight className="text-lg" />
-        </Link>
       </div>
 
       {/* Use lazy load for the image */}
@@ -71,7 +66,7 @@ const Blog = (props) => {
           alt="blogcoverimage"
         />
       </LazyLoad>
-    </div>
+    </Link>
   );
 };
 
