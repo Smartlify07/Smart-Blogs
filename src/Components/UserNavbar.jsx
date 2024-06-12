@@ -9,7 +9,6 @@ const UserNavbar = () => {
 
   const { searchValue, setSearchValue } = useSearchValues();
 
-  console.log(searchValue);
   const handleChange = (e) => {
     setSearchValue(e.target.value);
   };
