@@ -1,6 +1,6 @@
 {
   "current_user": {
-    "userId": "5horudf"
+    "userId": "873wevo"
   },
   "users": [
     {
@@ -28,44 +28,102 @@
       "bio": "A bio",
       "userProfileImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717625978/lqhi7k0pwnvjl9jrltd2.webp",
       "id": "5horudf",
+      "posts": [],
+      "comments": [
+        {
+          "comment_id": "mk6plyq",
+          "content": "mtv",
+          "username": "Smartlify",
+          "timestamp": 1718220888183,
+          "replies": []
+        }
+      ]
+    },
+    {
+      "id": "vmhbqys",
+      "name": "Obinna Anosike",
+      "email": "anosikeobinna895@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "tuip4m4",
+      "name": "Anosike",
+      "email": "obinna@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
       "posts": [
         {
-          "createdAt": 1717626026815,
-          "title": "A text",
-          "content": "Text",
+          "createdAt": 1718546146646,
+          "id": "wjisf7d",
+          "title": "Read",
+          "content": "Ment",
           "user": {
-            "name": "Smartlify",
+            "name": "Anosike",
             "userImage": "",
-            "id": "5horudf"
+            "id": "tuip4m4"
           },
           "upvotes": 0,
-          "comments": []
-        },
-        {
-          "createdAt": 1717889288606,
-          "title": "New post",
-          "content": "My very new post I'm so proud of myself ",
-          "user": {
-            "name": "Smartlify",
-            "userImage": ""
-          },
-          "upvotes": 0,
-          "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717889265/uj8qg3jml0ugvklw4j6q.jpg",
-          "comments": []
-        },
-        {
-          "createdAt": 1718197908807,
-          "title": "My new blog write",
-          "content": "Medigar",
-          "user": {
-            "name": "Smartlify",
-            "userImage": ""
-          },
-          "upvotes": 0,
-          "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1718197896/wsecsfekicxpypzab2ti.webp",
           "comments": []
         }
       ]
+    },
+    {
+      "id": "vopxo26",
+      "name": "Obinna Anosike",
+      "email": "anosike@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "n8xpet4",
+      "name": "Obinna Anosike",
+      "email": "fufhf@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "f9oure2",
+      "name": "Obinna Anosike",
+      "email": "smartlify09@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "aim0nmq",
+      "name": "",
+      "email": "",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "p05xlcy",
+      "name": "Obinna Anosike",
+      "email": "smartlify09@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "m4oeyf1",
+      "name": "Obinna Anosike",
+      "email": "anosikeobinna895@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "873wevo",
+      "name": "Obinna Anosike",
+      "email": "anosikeobinna895@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
     }
   ],
   "blogs": [
@@ -76,9 +134,10 @@
       "content": "This is the first blog post content\t. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
       "user": {
         "name": "John Doe",
-        "userImage": "/images/blogs/johndoe.jpg"
+        "userImage": "/images/blogs/johndoe.jpg",
+        "id": 1
       },
-      "upvotes": 1500,
+      "upvotes": 1504,
       "blogCoverImage": "/images/blogs/covers/introtoblogging.jpg",
       "comments": [
         {
@@ -86,7 +145,20 @@
           "username": "user123",
           "content": "Great post! Really enjoyed reading it.",
           "timestamp": "2024-05-23T10:00:00Z",
-          "replies": []
+          "replies": [
+            {
+              "reply_id": "y9qa2r4",
+              "content": "mtn",
+              "username": "Smartlify",
+              "timestamp": 1718237288937
+            },
+            {
+              "reply_id": "y83boj9",
+              "content": "Mtn",
+              "username": "Smartlify",
+              "timestamp": 1718237402709
+            }
+          ]
         },
         {
           "comment_id": 2,
@@ -166,7 +238,8 @@
       "content": "This is the second blog post content. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui.",
       "user": {
         "name": "Jane Smith",
-        "userImage": "/images/blogs/janesmith.jpg"
+        "userImage": "/images/blogs/janesmith.jpg",
+        "id": 2
       },
       "upvotes": 100,
       "blogCoverImage": "/images/blogs/covers/webdesign.jpg",
@@ -194,9 +267,10 @@
       "content": "This is the third blog post content. Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nulla vitae elit libero, a pharetra augue. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.",
       "user": {
         "name": "Alice Johnson",
-        "userImage": "/images/blogs/alicejohnson.jpg"
+        "userImage": "/images/blogs/alicejohnson.jpg",
+        "id": 3
       },
-      "upvotes": 900,
+      "upvotes": 904,
       "blogCoverImage": "/images/blogs/covers/advanced-javascript.jpg",
       "comments": [
         {
@@ -216,138 +290,16 @@
       ]
     },
     {
-      "id": "2b4a",
-      "createdAt": 1717635034255,
-      "title": "Blog",
-      "content": "Blog",
+      "id": "wjisf7d",
+      "createdAt": 1718546146618,
+      "title": "Read",
+      "content": "Ment",
       "user": {
-        "name": "Smartlify",
+        "name": "Anosike",
         "userImage": "",
-        "id": "5horudf"
+        "id": "tuip4m4"
       },
       "upvotes": 0,
-      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717635010/ayzs9a26vsp2qr2x6v1c.webp",
-      "comments": [
-        {
-          "comment_id": "3o5i64g",
-          "content": "Mech",
-          "username": "Smartlify",
-          "timestamp": 1718043662094,
-          "replies": []
-        },
-        {
-          "comment_id": "x8p2ccw",
-          "content": "Mechan",
-          "username": "Smartlify",
-          "timestamp": 1718052709340,
-          "replies": []
-        },
-        {
-          "comment_id": "7dgucxy",
-          "content": "New",
-          "username": "Smartlify",
-          "timestamp": 1718052776708,
-          "replies": []
-        },
-        {
-          "comment_id": "k8uhw3l",
-          "content": "Men",
-          "username": "Smartlify",
-          "timestamp": 1718053053656,
-          "replies": []
-        },
-        {
-          "comment_id": "qbylohn",
-          "content": "Men",
-          "username": "Smartlify",
-          "timestamp": 1718053278471,
-          "replies": []
-        },
-        {
-          "comment_id": "8sup6u8",
-          "content": "Mens",
-          "username": "Smartlify",
-          "timestamp": 1718053325421,
-          "replies": []
-        },
-        {
-          "comment_id": "57y9c5v",
-          "content": "Ow",
-          "username": "Smartlify",
-          "timestamp": 1718053366268,
-          "replies": []
-        },
-        {
-          "comment_id": "00xhdtz",
-          "content": "Owie",
-          "username": "Smartlify",
-          "timestamp": 1718053698375,
-          "replies": []
-        },
-        {
-          "comment_id": "7ch73yq",
-          "content": "Owiefh",
-          "username": "Smartlify",
-          "timestamp": 1718053747997,
-          "replies": []
-        },
-        {
-          "comment_id": "1otgtwt",
-          "content": "Wtf are you doing??",
-          "username": "Smartlify",
-          "timestamp": 1718094071961,
-          "replies": []
-        },
-        {
-          "comment_id": "wwjevxt",
-          "content": "",
-          "username": "Smartlify",
-          "timestamp": 1718119235592,
-          "replies": []
-        }
-      ]
-    },
-    {
-      "id": "e61d",
-      "createdAt": 1717889288533,
-      "title": "New post",
-      "content": "My very new post I'm so proud of myself ",
-      "user": {
-        "name": "Smartlify",
-        "userImage": "",
-        "id": "5horudf"
-      },
-      "upvotes": 0,
-      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1717889265/uj8qg3jml0ugvklw4j6q.jpg",
-      "comments": [
-        {
-          "comment_id": "60n58d7",
-          "content": "Hey there",
-          "username": "Smartlify",
-          "timestamp": 1718054541211,
-          "replies": []
-        },
-        {
-          "comment_id": "0696ctb",
-          "content": "How's it going",
-          "replies": [],
-          "username": "Smartlify",
-          "timestamp": 1718054551886
-        }
-      ]
-    },
-    {
-      "id": "26d6",
-      "createdAt": 1718197908707,
-      "title": "My new blog write",
-      "content": "Medigar",
-      "user": {
-        "name": "Smartlify",
-        "userImage": "",
-        "id": "5horudf"
-      },
-      "upvotes": 0,
-      "blogCoverImage": "http://res.cloudinary.com/dgpbznsc3/image/upload/v1718197896/wsecsfekicxpypzab2ti.webp",
       "comments": []
     }
   ]

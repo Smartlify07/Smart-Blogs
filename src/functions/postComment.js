@@ -1,19 +1,23 @@
 import { generateUID } from "./generateUID";
 import getUrl from "./getUrl";
+import { getCurrentUserId } from "./getCurrenUserId";
 
 export const postComment = async (id, content, userName, setNewComments) => {
-  const { blogUrl } = getUrl();
-  const uId = generateUID();
-
   try {
-    const blogDetailsresponse = await fetch(blogUrl + id);
-    const data = await blogDetailsresponse.json();
-    if (!blogDetailsresponse.ok) {
+    const userId = await getCurrentUserId();
+    const { blogUrl } = getUrl();
+    const uId = generateUID();
+    const blogDetailsResponse = await fetch(blogUrl + id);
+
+    const blogDetailsData = await blogDetailsResponse.json();
+    console.log(userId);
+
+    if (!blogDetailsResponse.ok) {
       throw new Error(
-        "Unable to make such request" + blogDetailsresponse.status
+        "Unable to make such request" + blogDetailsResponse.status
       );
     }
-    const { comments } = data;
+    const { comments } = blogDetailsData;
 
     const prevComments = [...comments];
 

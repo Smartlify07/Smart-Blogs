@@ -5,7 +5,7 @@ const Navbar = () => {
     <nav className="py-5 px-6 bg-white font-rubik lg:px-20">
       <div className="flex items-center justify-between">
         <Link to="/" className="text-3xl font-semibold lg:text-3xl">
-          <span className="text-malachite">Smart</span>Blogs
+          <span className="text-pakistangreen">Smart</span>Blogs
         </Link>
         <ul className="hidden  items-center gap-10 justify-between md:flex ">
           <Link className="text-dark text-lg" to={"/create"}>
@@ -17,7 +17,7 @@ const Navbar = () => {
           <Link className="text-dark text-lg">Our Story</Link>
           <Link
             to={"/signup"}
-            className="bg-malachite rounded-sm text-white font-rubik font-semibold px-6 py-3 text-base transition-all ease-in hover:bg-seagreen"
+            className="bg-pakistangreen rounded-sm text-white font-rubik font-semibold px-6 py-3 text-base transition-all ease-in hover:bg-darkgreen"
           >
             Get started
           </Link>

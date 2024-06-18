@@ -3,7 +3,13 @@ import { useState } from "react";
 import useUserDetails from "../../hooks/useUserDetails";
 import UserAvatar from "../UserAvatar";
 import { postReply } from "../../functions/postReply";
-const ReplyForm = ({ blogId, commentId, setNewComments, showReplyForm }) => {
+const ReplyForm = ({
+  blogId,
+  commentId,
+  setNewComments,
+  setShowReplyForm,
+  showReplyForm,
+}) => {
   const { userName, userNameInitial } = useUserDetails();
   const [message, setMessage] = useState("");
 
@@ -15,6 +21,7 @@ const ReplyForm = ({ blogId, commentId, setNewComments, showReplyForm }) => {
     e.preventDefault();
     postReply(blogId, commentId, message, userName, setNewComments);
     setMessage("");
+    setShowReplyForm(false);
   };
 
   const cancelSubmit = () => {

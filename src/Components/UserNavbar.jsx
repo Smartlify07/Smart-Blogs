@@ -17,7 +17,7 @@ const UserNavbar = () => {
       <nav className="flex items-center justify-between">
         <div className="flex items-center  gap-7">
           <Link to="/" className="text-2xl font-semibold lg:text-2xl">
-            <span className="text-malachite">Smart</span>Blogs
+            <span className="text-pakistangreen">Smart</span>Blogs
           </Link>
 
           <div className="relative">

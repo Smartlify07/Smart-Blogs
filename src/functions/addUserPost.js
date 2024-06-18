@@ -1,6 +1,6 @@
 import getUrl from "./getUrl";
 
-export const addUserPost = async (postTitle, postBody, blogCoverImage) => {
+export const addUserPost = async (id, postTitle, postBody, blogCoverImage) => {
   try {
     const { userProfileUrl, currentUserUrl } = getUrl();
 
@@ -14,11 +14,13 @@ export const addUserPost = async (postTitle, postBody, blogCoverImage) => {
     // Create the new post object
     const newPost = {
       createdAt: Date.now(),
+      id: id,
       title: postTitle,
       content: postBody,
       user: {
         name: userName,
         userImage: "",
+        id: userId,
       },
       upvotes: 0,
       blogCoverImage: blogCoverImage,
@@ -40,8 +42,6 @@ export const addUserPost = async (postTitle, postBody, blogCoverImage) => {
     if (!response.ok) {
       throw new Error("Couldn't make such request" + response.status);
     }
-
-
   } catch (error) {
     console.error(error);
   }

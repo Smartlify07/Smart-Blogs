@@ -23,6 +23,8 @@ export const handleSignUp = async ({ name, email }) => {
     };
     await updateCurrentUser(userId);
 
+    console.log(userProfile);
+
     const response = await fetch(userProfileUrl, requestOptions);
 
     if (!response.ok) {

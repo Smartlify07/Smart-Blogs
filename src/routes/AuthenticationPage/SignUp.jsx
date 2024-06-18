@@ -1,95 +1,75 @@
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
-import Button from "../../Components/Button";
+import { useNavigate } from "react-router-dom";
 import { handleSignUp } from "../../functions/handleSignUp.js";
 import useAuthentication from "../../hooks/useAuthentication";
+import { Formik, Form } from "formik";
+import * as Yup from "yup";
+import TextInput from "../../Components/TextInput.jsx";
 
 const SignUp = () => {
   const { setIsLoggedIn } = useAuthentication();
   const navigate = useNavigate();
 
-  const [formFields, setFormFields] = useState({
-    name: "",
-    email: "",
-    password: "",
-  });
-
-  function handleChange(e) {
-    const { name, value } = e.target;
-    setFormFields((values) => ({
-      ...values,
-      [name]: value,
-    }));
-  }
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    if (!formFields.name || !formFields.email) {
-      console.log("All fields are required");
-      return;
-    } else {
-      handleSignUp({ name: formFields.name, email: formFields.email });
-      setFormFields({
-        name: "",
-        email: "",
-      });
-      setIsLoggedIn(true);
-      navigate("/");
-    }
-  }
-
   return (
-    <section className="w-full min-h-screen">
-      <div className="flex overflow-hidden relative  min-h-screen h-full">
-        <div className="hidden bg-black h-screen flex-col gap-6 text-white items-center justify-center lg:flex lg:w-7/12 xl:w-6/12 ">
-          <h1 className="text-white font-extrabold text-3xl text-center font-rubik ">
-            Dive deeper into your interests
+    <section className="w-full h-screen flex items-center py-5 justify-center overflow-hidden">
+      <div className="border h-full flex items-center justify-center   lg:w-7/12">
+        <div className="bg-[url(./images/signup.jpg)] object-contain relative bg-cover bg-center hidden  items-center justify-center h-full rounded-sm before:opacity-30 before:bg-pakistangreen before:absolute before:h-full before:w-full lg:w-2/3 lg:flex">
+          <h1 className="z-10 text-3xl flex items-center gap-2 font-bold  text-black font-rubik italic ">
+            Get{" "}
+            <div className="bg-pakistangreen block skew-y-[4deg] text-white px-2 py-3">
+              started!
+            </div>
           </h1>
         </div>
+        <Formik
+          initialValues={{
+            name: "",
+            email: "",
+          }}
+          validationSchema={Yup.object({
+            name: Yup.string()
+              .min(2, "Invalid name")
+              .required("Name is required"),
+            email: Yup.string()
+              .email("That isn't a valid email address")
+              .required("Email address is required"),
+          })}
+          onSubmit={(values) => {
+            console.log(values);
+            handleSignUp({
+              name: values.name,
+              email: values.email,
+            });
 
-        <div className=" flex flex-col w-full gap-6 items-center justify-center min-h-screen lg:w-6/12  ">
-          <h1 className="text-black text-left text-2xl font-semibold font-rubik">
-            Sign up for{" "}
-            <span className="text-malachite text-2xl"> Smart Blogs</span>
-          </h1>
+            console.log("Clicked");
+            setIsLoggedIn(true);
+            navigate("/");
+          }}
+        >
+          <Form className="flex  flex-col gap-6 px-6 lg:w-2/3">
+            <h1 className="text-3xl font-rubik font-semibold text-center text-pakistangreen">
+              Smart <span className="text-black">Blogs</span>
+            </h1>
+            <TextInput
+              name="name"
+              label={"Name"}
+              type="text"
+              placeholder="John Doe"
+            />
+            <TextInput
+              name="email"
+              label={"Email address"}
+              type="email"
+              placeholder="johndoe@example.com"
+            />
 
-          <form
-            onSubmit={(e) => handleSubmit(e)}
-            className="flex flex-col gap-5 items-center justify-center lg:w-6/12 font-rubik"
-          >
-            <div className="flex flex-col gap-2 w-full">
-              <label htmlFor="Name">Name</label>
-              <input
-                className=" border border-malachite w-full p-3 placeholder:text-sm focus:border-2 focus:border-seagreen focus:outline-none"
-                type="text"
-                name="name"
-                placeholder="Name"
-                value={formFields.name}
-                onChange={handleChange}
-              />
-            </div>
-            <div className="flex flex-col gap-2 w-full">
-              <label htmlFor="email">Email</label>
-              <input
-                className=" border border-malachite w-full p-3 placeholder:text-sm focus:border-2 focus:border-seagreen focus:outline-none"
-                type="email"
-                name="email"
-                placeholder="name@example.com"
-                value={formFields.email}
-                onChange={handleChange}
-              />
-            </div>
-
-            <Button value="Sign up"></Button>
-          </form>
-
-          <p className="text-black text-sm font-rubik">
-            Already have an account?{" "}
-            <Link to={"/login"} className="text-malachite">
-              Login
-            </Link>
-          </p>
-        </div>
+            <button
+              type="submit"
+              className="bg-gradient-to-r from-pakistangreen to-black py-3 px-7 font-rubik font-semibold text-white transition-all hover:bg-darkgreen"
+            >
+              Get started
+            </button>
+          </Form>
+        </Formik>
       </div>
     </section>
   );

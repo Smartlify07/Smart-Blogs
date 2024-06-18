@@ -10,6 +10,7 @@ const fetchUserDetails = async () => {
     throw Error("Couldn't fetch user profile");
   }
   const details = await response.json();
+  console.log(details);
 
   return details;
 };

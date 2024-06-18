@@ -34,6 +34,10 @@ const BlogList = () => {
             <BlogPost {...item} />
           </Suspense>
         ))}
+
+      {searchValue && filteredBlogs.length === 0 && (
+        <h1 className="text-4xl">No blogs found</h1>
+      )}
     </section>
   );
 };

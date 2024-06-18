@@ -17,6 +17,8 @@ import FetchErrorPage from "./routes/ErrorPages/FetchErrorPage";
 import ProfileLayout from "./layout/ProfileLayout";
 import EditProfile from "./routes/Profile/EditProfile";
 import SearchValueProvider from "./Context/SearchValueContext";
+import BlogDetailsError from "./routes/ErrorPages/BlogDetailsError";
+import NotFound from "./routes/ErrorPages/NotFound";
 
 function App() {
   const router = createBrowserRouter(
@@ -35,6 +37,7 @@ function App() {
             path="blogs/:title/:id"
             element={<BlogDetails />}
             loader={fetchBlogPost}
+            errorElement={<BlogDetailsError />}
           />
           <Route path="/dashboard" element={<ProfileLayout />} />
           <Route path="/dashboard/edit" element={<EditProfile />} />
@@ -42,6 +45,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="signup" element={<SignUp />} />
         <Route path="write" element={<CreateBlog />} />
+        <Route path="*" element={<NotFound />} />
       </>
     )
   );
