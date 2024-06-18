@@ -11,6 +11,7 @@
     "server": "json-server -p 4000 -w ./src/api/data.json"
   },
   "dependencies": {
+    "@vercel/blob": "^0.23.3",
     "cloudinary": "^2.2.0",
     "cloudinary-react": "^1.8.1",
     "formik": "^2.4.6",

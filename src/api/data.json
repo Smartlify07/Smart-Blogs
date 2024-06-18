@@ -1,6 +1,6 @@
 {
   "current_user": {
-    "userId": "873wevo"
+    "userId": "o42ndhh"
   },
   "users": [
     {
@@ -123,6 +123,69 @@
       "email": "anosikeobinna895@gmail.com",
       "bio": "",
       "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "wswmycf",
+      "name": "Obinna Anosike",
+      "email": "smartlify09@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "9zyx6kd",
+      "name": "Obinna Anosike",
+      "email": "anosike@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "k97i05x",
+      "name": "Obinna Anosike",
+      "email": "anosike@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "gmq2wm9",
+      "name": "Smartlify",
+      "email": "smartlify09@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "7lyclc0",
+      "name": "Abinnas",
+      "email": "anosike@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "ou8gx8r",
+      "name": "AnosikeObinna",
+      "email": "anosikeobinna895@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "id": "yti5orh",
+      "name": "Obinna Anosike",
+      "email": "anosikeobinna895@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
+    },
+    {
+      "name": "Eved",
+      "bio": "",
+      "userProfileImage": "",
+      "id": "o42ndhh",
       "posts": []
     }
   ],
@@ -257,6 +320,13 @@
           "content": "I found some typos in the article. Please review.",
           "timestamp": "2024-05-23T14:00:00Z",
           "replies": []
+        },
+        {
+          "comment_id": "r71puam",
+          "content": "Mega",
+          "username": "Smartlify",
+          "timestamp": 1718730822370,
+          "replies": []
         }
       ]
     },
@@ -286,6 +356,13 @@
           "content": "I found some typos in the article.",
           "timestamp": "2024-05-23T14:00:00Z",
           "replies": []
+        },
+        {
+          "comment_id": "lwcegfp",
+          "content": "SM",
+          "username": "Abinnas",
+          "timestamp": 1718730916687,
+          "replies": []
         }
       ]
     },
@@ -298,6 +375,19 @@
         "name": "Anosike",
         "userImage": "",
         "id": "tuip4m4"
+      },
+      "upvotes": 0,
+      "comments": []
+    },
+    {
+      "id": "8c454pm",
+      "createdAt": 1718738585311,
+      "title": "Men",
+      "content": "I'm done",
+      "user": {
+        "name": "Eves",
+        "userImage": "",
+        "id": "o42ndhh"
       },
       "upvotes": 0,
       "comments": []

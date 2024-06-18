@@ -21,15 +21,18 @@ export const handleSignUp = async ({ name, email }) => {
       },
       body: JSON.stringify(userProfile),
     };
-    await updateCurrentUser(userId);
 
     console.log(userProfile);
 
     const response = await fetch(userProfileUrl, requestOptions);
 
     if (!response.ok) {
-      throw new Error("A problem occurred with that action " + response.status);
+      console.log(response.status);
+      throw new Error(
+        "A problem occurred with that action with response: " + response.status
+      );
     }
+    await updateCurrentUser(userId);
   } catch (error) {
     console.error(error);
   }
