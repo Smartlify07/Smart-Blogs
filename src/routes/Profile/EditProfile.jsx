@@ -7,8 +7,7 @@ import getUrl from "../../functions/getUrl";
 import { uploadImage } from "../../functions/uploadImage";
 
 const EditProfile = () => {
-  const { userName, userNameInitial, isLoading, bio, userProfileImage } =
-    useUserDetails();
+  const { userName, isLoading, bio, userProfileImage } = useUserDetails();
   const { cloudinaryImagesUrl } = getUrl();
 
   const navigate = useNavigate();
@@ -66,10 +65,10 @@ const EditProfile = () => {
           <div className="flex flex-col gap-1 items-center">
             <p className="text-[#555] mt-4">Photo</p>
 
-            <div className="w-16 h-16 rounded-full relative bg-malachite text-white flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full relative bg-seagreen text-white flex items-center justify-center">
               {!imageSrc && !userProfileImage && (
                 <h1 className="text-2xl font-semibold">
-                  {userNameInitial.toUpperCase()}
+                  {userName.charAt(0).toUpperCase()}
                 </h1>
               )}
 

@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa6";
 import Blog from "../../Components/Blogs/Blog";
 import useUserDetails from "../../hooks/useUserDetails";
 import { Link } from "react-router-dom";
+import React from "react";
 
 const Profile = () => {
   const { userName, userNameInitial, userProfileImage, userPosts } =
@@ -22,14 +23,14 @@ const Profile = () => {
         <div className="flex flex-col gap-3">
           {userBlogs.length === 0 && (
             <div className="flex flex-col items-center gap-4 my-4">
-              <h1 className="text-3xl text-center text-malachite  font-semibold">
+              <h1 className="text-3xl text-center text-seagreen  font-semibold">
                 No creations yet?{" "}
                 <span className="text-lg text-gray-700 ">
                   No worries, you can start now
                 </span>
               </h1>
 
-              <Link className="bg-malachite py-3 px-5 text-white" to={"/write"}>
+              <Link className="bg-seagreen py-3 px-5 text-white" to={"/write"}>
                 Start writing
               </Link>
             </div>
@@ -40,7 +41,7 @@ const Profile = () => {
       </div>
 
       <div className=" border-l px-20 w-full  lg:w-4/12 flex flex-col gap-1">
-        <div className="rounded-full w-20 h-20 mt-20 text-4xl text-white font-semibold bg-malachite flex items-center justify-center">
+        <div className="rounded-full w-20 h-20 mt-20 text-4xl text-white font-semibold bg-pakistangreen flex items-center justify-center">
           {!userProfileImage ? (
             userNameInitial.toUpperCase()
           ) : (
@@ -51,7 +52,7 @@ const Profile = () => {
           )}
         </div>
         <h3 className="text-lg font-semibold mt-3">{userName}</h3>
-        <Link to={"edit"} className="text-seagreen font-semibold mt-2">
+        <Link to={"edit"} className="text-pakistangreen font-semibold mt-2">
           Edit profile
         </Link>
       </div>
@@ -77,4 +78,4 @@ const UserBlogs = ({ userBlogs }) => {
   );
 };
 
-export default Profile;
+export default React.memo(Profile);

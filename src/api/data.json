@@ -1,6 +1,6 @@
 {
   "current_user": {
-    "userId": "o42ndhh"
+    "userId": "xpquax1"
   },
   "users": [
     {
@@ -187,6 +187,14 @@
       "userProfileImage": "",
       "id": "o42ndhh",
       "posts": []
+    },
+    {
+      "id": "xpquax1",
+      "name": "Obinna Anosike",
+      "email": "smartlify09@gmail.com",
+      "bio": "",
+      "userProfileImage": "",
+      "posts": []
     }
   ],
   "blogs": [
@@ -200,7 +208,7 @@
         "userImage": "/images/blogs/johndoe.jpg",
         "id": 1
       },
-      "upvotes": 1504,
+      "upvotes": 1513,
       "blogCoverImage": "/images/blogs/covers/introtoblogging.jpg",
       "comments": [
         {

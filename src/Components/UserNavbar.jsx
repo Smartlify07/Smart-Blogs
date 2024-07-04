@@ -5,7 +5,7 @@ import UserAvatar from "./UserAvatar";
 import useSearchValues from "../hooks/useSearchValues";
 
 const UserNavbar = () => {
-  const { userNameInitial, userProfileImage } = useUserDetails();
+  const { userName, userProfileImage } = useUserDetails();
 
   const { searchValue, setSearchValue } = useSearchValues();
 
@@ -40,7 +40,7 @@ const UserNavbar = () => {
           </Link>
 
           {!userProfileImage && (
-            <UserAvatar userInitial={userNameInitial.toUpperCase()} />
+            <UserAvatar userInitial={userName.charAt(0).toUpperCase()} />
           )}
 
           {userProfileImage && (
